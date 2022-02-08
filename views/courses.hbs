@@ -2,15 +2,29 @@
 
 
 {{#each courses}}
-<br>
-{{this.name}}
-<br>
-{{this.type}} 
-<br> 
-<a href="/courses/{{this.id}}">details</a>
-<br> 
+<div id="course-{{this.id}}" >
+    <br>
+    {{this.name}}
+    <br>
+    {{this.type}} 
+    <br> 
+    <a href="/courses/{{this.id}}">details</a>
+    <br> 
+    <form  action="/courses/{{this.id}}/delete" method="post">
+        <button type="submit" >Delete SSR</button>
+    </form>
+
+    <button type="button" value="{{this.id}}" class="delete-btn btn btn-danger">
+        Delete Client
+    </button>
+    <br> 
+</div>
+
 
 {{/each}}
 
 
 <a class="btn btn-primary" href="/courses/new">Create new course</a>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/delete.js"></script>

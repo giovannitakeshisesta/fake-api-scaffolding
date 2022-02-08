@@ -37,21 +37,6 @@
       "id": 4,
       "name": "UX/UI",
       "type": "Part Time"
-    },
-    {
-      "name": "taglio e cucito",
-      "type": "Full Time",
-      "id": 5
-    },
-    {
-      "name": "taglio e cucito",
-      "type": "Full Time",
-      "id": 6
-    },
-    {
-      "name": "pippe a manetta",
-      "type": "Full Time",
-      "id": 7
     }
   ],
   "bootcamps": [

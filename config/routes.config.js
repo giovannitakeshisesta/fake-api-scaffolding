@@ -18,6 +18,8 @@ router.post('/courses', coursesController.doCreate)
 // display details
 router.get('/courses/:id', coursesController.get)
 
+// delete  course
+router.post('/courses/:id/delete', coursesController.delete)
 
 
 module.exports = router;

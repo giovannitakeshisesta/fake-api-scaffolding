@@ -27,11 +27,34 @@ module.exports.list = (req, res, next) => {
     res.render('newCourse')
   }
 
-  // POST ROUTE - createCourse
+  // Post route- createCourse
   module.exports.doCreate = (req, res, next) => {
     coursesService.createCourse(req.body)
       .then((response) => {
         res.redirect(`/courses/${response.data.id}`)
+      })
+      .catch(err => next(err))
+  }
+
+
+  // delete  course  -deleteCourse
+  // this method  refresh the page every time and send a query to the db
+  module.exports.delete = (req, res, next) => {
+    coursesService.deleteCourse(req.params.id)
+    .then((response) => {
+      res.redirect('/courses')
+    })
+    .catch(err => next(err))
+  }
+
+  // this other way  
+  // 1)remove the element from the db 
+  // 2)remove the element from the dome
+  module.exports.deleteClient = (req, res, next) => {
+    console.log("peinate")
+    coursesService.deleteCourse(req.params.id)
+      .then((response) => {
+        res.status(200).json({})
       })
       .catch(err => next(err))
   }
