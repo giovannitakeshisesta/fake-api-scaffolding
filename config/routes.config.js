@@ -8,7 +8,12 @@ router.get('/', (req, res, next) => {
   res.render('index')
 })
 
-
+//display courses
 router.get('/courses', coursesController.list)
+
+// display details
+router.get('/courses/:id', coursesController.get)
+
+
 
 module.exports = router;
