@@ -11,6 +11,10 @@ router.get('/', (req, res, next) => {
 //display courses
 router.get('/courses', coursesController.list)
 
+// create new course
+router.get('/courses/new', coursesController.create)
+router.post('/courses', coursesController.doCreate)
+
 // display details
 router.get('/courses/:id', coursesController.get)
 

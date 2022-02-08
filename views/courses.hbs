@@ -3,11 +3,14 @@
 
 {{#each courses}}
 <br>
-{{this.type}}
+{{this.name}}
 <br>
-{{this.name}} 
+{{this.type}} 
 <br> 
 <a href="/courses/{{this.id}}">details</a>
 <br> 
 
 {{/each}}
+
+
+<a class="btn btn-primary" href="/courses/new">Create new course</a>
