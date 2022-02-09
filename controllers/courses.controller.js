@@ -58,3 +58,25 @@ module.exports.list = (req, res, next) => {
       })
       .catch(err => next(err))
   }
+
+
+  // edit
+  module.exports.edit = (req, res, next) => {
+    coursesService.getOneCourse(req.params.id)
+      .then(response => {
+        res.render('courseEdit', { course: response.data })
+      })
+      .catch(err => next(err))
+  }
+
+  // edit post
+  module.exports.doEdit = (req, res, next) => {
+    const id = req.params.id
+    console.log("controller",id ,req.params)
+    coursesService.editCourse(id, req.body)
+      .then((response) => {
+        console.log("ASDASDASDASDASDASDASD",response.data)
+        res.redirect(`/courses/${response.data.id}`)
+      })
+      .catch(err => next(err))
+  }

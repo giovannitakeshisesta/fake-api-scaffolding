@@ -8,10 +8,17 @@ const createCourse = (data) => httpClient.post('/courses', data)
 
 const deleteCourse = (courseId) => httpClient.delete(`/courses/${courseId}`)
 
+const editCourse = (courseId,data) => httpClient.put(`/courses/${courseId}`,data)
+
+
+//editCourse
+
+
 module.exports = {
     getCourses,
     getOneCourse,
     createCourse,
-    deleteCourse
+    deleteCourse,
+    editCourse
 }
 

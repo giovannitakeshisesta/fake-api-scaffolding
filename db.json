@@ -19,14 +19,9 @@
   ],
   "courses": [
     {
-      "id": 1,
-      "name": "WebDev",
-      "type": "Full Time"
-    },
-    {
-      "id": 2,
-      "name": "WebDev",
-      "type": "Part Time"
+      "name": "taco burrito",
+      "type": "Full Time",
+      "id": 2
     },
     {
       "id": 3,
@@ -41,19 +36,9 @@
   ],
   "bootcamps": [
     {
-      "id": 1,
-      "cityId": 1,
-      "courseId": 1
-    },
-    {
       "id": 2,
       "cityId": 2,
       "courseId": 2
-    },
-    {
-      "id": 3,
-      "cityId": 3,
-      "courseId": 1
     },
     {
       "id": 4,

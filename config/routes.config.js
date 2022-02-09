@@ -21,5 +21,9 @@ router.get('/courses/:id', coursesController.get)
 // delete  course
 router.post('/courses/:id/delete', coursesController.delete)
 
+// edit
+router.get('/courses/:id/edit', coursesController.edit)
+router.post('/courses/:id/edit', coursesController.doEdit)
+
 
 module.exports = router;
